@@ -1,4 +1,7 @@
 <?php 
+namespace Cart;
+use Money\Money;
+
 class StandardProduct implements Product
 {
     protected $name;

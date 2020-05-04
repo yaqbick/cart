@@ -1,4 +1,6 @@
 <?php
+namespace Cart;
+use Money\Money;
 
 interface Product
 {
