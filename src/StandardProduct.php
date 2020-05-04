@@ -20,6 +20,7 @@ class StandardProduct implements Product
     
     public function getPrice(): Money
     {
-        $this->price = $price;
+       $this->price = $price;
+       return $this->price;
     }
 }

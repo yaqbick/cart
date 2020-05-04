@@ -1,15 +1,18 @@
 <?php 
 namespace Cart;
 use Countable;
+use Money\Money;
 
 class Cart implements Countable 
 {
    protected  $products;
+   protected  $totals;
 
    public function __construct(array $products)
    {
         $this->validate($products);
         $this->products = $products;
+        $this->totals = new Money($products[0]->getPrice()->getCurrency(),0);
    }
 
     public function addProduct(Product $product):void
@@ -22,8 +25,10 @@ class Cart implements Countable
     {
         foreach ($this->products as $product)
         {
-
+            $this->totals->add($product->getPrice());
         }
+
+        return $this->totals;
     }
 
     public function count(): int
