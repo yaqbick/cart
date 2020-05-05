@@ -15,12 +15,11 @@ class StandardProduct implements Product
 
     public function getName(): string
     {
-        return  $this->name = $name;
+        return  $this->name;
     }
     
     public function getPrice(): Money
     {
-       $this->price = $price;
        return $this->price;
     }
 }

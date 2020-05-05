@@ -12,22 +12,27 @@ class Cart implements Countable
    {
         $this->validate($products);
         $this->products = $products;
-        $this->totals = new Money($products[0]->getPrice()->getCurrency(),0);
+        $this->totals = new Money(0,$products[0]->getPrice()->getCurrency());
+        $this->setTotalPrice();
    }
 
     public function addProduct(Product $product):void
     {
         $this->products[] = $product;
+        $this->totals = $this->totals->add($product->getPrice());
     }
     
-    // Zwraca łączną sumę dodanych do koszyka produktów
-    public function getTotalPrice(): Money
+
+    private function setTotalPrice():void 
     {
         foreach ($this->products as $product)
         {
-            $this->totals->add($product->getPrice());
+            $this->totals = $this->totals->add($product->getPrice());
         }
+    }
 
+    public function getTotalPrice(): Money
+    {
         return $this->totals;
     }
 

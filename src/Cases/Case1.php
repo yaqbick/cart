@@ -1,5 +1,5 @@
 <?
-namespace Cart\criteria;
+namespace Cart\Cases;
 
 class Case1 implements Criteria
 {
