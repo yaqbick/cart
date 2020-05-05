@@ -22,6 +22,10 @@ class Cart implements Countable
         $this->totals = $this->totals->add($product->getPrice());
     }
     
+    public function getProducts():array
+    {
+        return $this->products;
+    }
 
     private function setTotalPrice():void 
     {
@@ -38,7 +42,7 @@ class Cart implements Countable
 
     public function count(): int
     {
-        return count($this->$products);
+        return count($this->products);
     }
 
     public function validate(array $products):void
