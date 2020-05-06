@@ -10,8 +10,11 @@ use Cart\Cases\QtyPriceCase;
 use Money\Money;
 
 $product1 = new StandardProduct("produkt 1", Money::EUR(10000));
+// $product2 = new StandardProduct("produkt 2", Money::EUR(10000));
+// $product3 = new StandardProduct("telewizor", Money::EUR(10000));
 $cart = new Cart([$product1]);
-$cart->addProduct($product1);
+// $cart->addProduct($product2);
+// $cart->addProduct($product3);
 $qtyCase = new QtyCase();
 $priceCase = new PriceCase();
 $tvCase = new TVCase();
@@ -23,8 +26,13 @@ foreach ($criteria as $criterium)
 {
     if($criterium->isSatisfiedBy($cart))
     {
+       
+       $result = 'TAK';
         break;
-        echo "TAK";
+    }
+    else
+    {
+        $result = 'NIE';
     }
 }
-echo "NIE";
+echo $result;

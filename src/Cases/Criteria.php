@@ -4,5 +4,5 @@ use Cart\Cart;
 
 interface Criteria
 {
-    public function isSatisfiedBy(Cart $cart):boolean;
+    public function isSatisfiedBy(Cart $cart):bool;
 }

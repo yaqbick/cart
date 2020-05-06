@@ -4,7 +4,7 @@ use Cart\Cart;
 
 class TVCase implements Criteria
 {
-    public function isSatisfiedBy(Cart $cart):boolean 
+    public function isSatisfiedBy(Cart $cart):bool
     {
         foreach($cart->getProducts() as $product)
         {

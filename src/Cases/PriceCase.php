@@ -4,8 +4,8 @@ use Cart\Cart;
 
 class PriceCase implements Criteria
 {
-    public function isSatisfiedBy(Cart $cart):boolean 
+    public function isSatisfiedBy(Cart $cart):bool
     {
-        return ($cart->getTotalPrice()-> greaterThan(10)) ? true : false;
+        return ($cart->getTotalPrice()->getAmount() > 10) ? true : false;
     }
 }
