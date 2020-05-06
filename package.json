@@ -1,0 +1,24 @@
+{
+  "name": "cart",
+  "version": "1.0.0",
+  "description": "Dany jest interfejs `Product` oraz jego podstawowa implementacja `StandardProduct`:",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yaqbick/cart.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yaqbick/cart/issues"
+  },
+  "homepage": "https://github.com/yaqbick/cart#readme"
+}

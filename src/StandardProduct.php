@@ -1,5 +1,7 @@
-<?php 
+<?php
+
 namespace Cart;
+
 use Money\Money;
 
 class StandardProduct implements Product
@@ -17,9 +19,9 @@ class StandardProduct implements Product
     {
         return  $this->name;
     }
-    
+
     public function getPrice(): Money
     {
-       return $this->price;
+        return $this->price;
     }
 }
